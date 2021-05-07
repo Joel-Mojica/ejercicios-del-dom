@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>Web Apis</h1>
+
+<style>
+:root{
+    --yellow-color: yellow;
+    --black-color: black;
+}
+ 
+.card{
+    display: inline-block;
+    background-color: var(--black-color);
+    color: var(--yellow-color);
+    
+    
+}
+
+.cards{
+    border: solid 1px;
+    padding: 10px;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.rotate-135{
+    transform: rotate(135deg);
+}
+
+.opacity{
+    opacity: .8;
+}
+
+.sepia{
+    filter: sepia(1);
+}
+
+    
+
+
+
+</style>
+
+
+
+<h2>
+    <p>DOM: Document Object Model</p>
+    <p>BOM: Browser Object Model</p>
+    <P>CSSOM: CSS Object Model</P>
+</h2>
+
+ <h3>Web aplis</h3>
+
+ <ul>
+     <li>Eventos</li>
+     <li>Forms</li>
+     <li>AJAX - Fetch</li>
+     <li>History</li>
+     <li>Web Storage</li>
+     <li>Geolocalitation</li>
+     <li>Drag & Drop</li>
+     <li>Indexed DB</li>
+     <li>Canvas</li>
+     <li>MatchMedia</li>
+     <li>etc..</li>
+ </ul>
+
+ <br>
+ <hr>
+ <br>
+
+ <h3>Manejo del Dom </h3>
+
+ <p id="que-es">
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolor voluptate veritatis 
+     consectetur eos optio ea iste a quod laudantium explicabo saepe ut debitis, maiores, magnam 
+     suscipit quo corrupti ducimus!
+ </p>
+
+ <nav id="menu">
+     <ul>
+         <li><a href="#">Seccion 1</a></li>
+         <li><a href="#">Seccion 2</a></li>
+         <li><a href="#">Seccion 3</a></li>
+         <li><a href="#">Seccion 4</a></li>
+         <li><a href="#">Seccion 5</a></li>
+     </ul>
+ </nav>
+
+ <input type="text" name="nombre" placeholder="nombre">
+
+ <a class="link-dom" href="index.html">DOM</a>
+
+ <hr>
+
+<section class="cards">
+    <figure class="card">
+        <img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2019/02/girasoles-978x652.jpg" alt="flower" width="300" height="250">
+        <figcaption>Tech</figcaption>
+    </figure>
+
+    <figure class="card">
+        <img src="https://media.istockphoto.com/photos/astronaut-deep-space-image-science-fiction-fantasy-in-high-resolution-picture-id1153308175?k=6&m=1153308175&s=612x612&w=0&h=_DHjK_PgfSmezWxaJJZ8IRdOG59f_j-mKiC0vJxfdSs=" alt="People" width="300" height="250">
+        <figcaption>Personas</figcaption>
+    </figure>
+
+    <figure class="card">
+        <img src="https://sites.google.com/site/imagenesdecarrosgratis/_/rsrc/1421516636272/home/carros-deportivos-lamborghini-aventador-tron_aventador.jpg" alt="car" width="300" height="250">
+        <figcaption>laptop</figcaption>
+    </figure>
+
+    <figure class="card">
+        <img src="https://i.pinimg.com/564x/15/29/0b/15290bbc53d23acf89de16f6e8274473.jpg" alt="Fruit" width="300" height="250">
+        <figcaption>fruit</figcaption>
+    </figure>
+
+</section>
+
+<hr>
+
+<button id="evento-multiple">evento multiple</button>
+
+
+<script src="js/dom.js"></script>
+
+</body>
+</html>
