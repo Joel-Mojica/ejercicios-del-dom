@@ -1,109 +1,274 @@
-*{
-    padding: 0%;
+* {
+  padding: 0%;
+}
+
+/********Menu izquierdo que se oculta********/
+.left-nav {
+  background-color: rgba(26, 24, 24, 0.808);
+  padding: 0%;
+  position: fixed;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 998;
+  visibility: hidden;
+  overflow-y: auto;
+  transform: translate(-100%);
+  transition: all 0.5s;
+}
+
+.left-nav.activo {
+  transform: translate(0%);
+  visibility: visible;
+}
+
+.seccion a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.seccion li {
+  list-style: none;
+  text-align: center;
+  padding: 3%;
+  font-size: xx-large;
+}
+
+.seccion a :hover {
+  background-color: yellow;
+  color: black;
+  transition: 0.2s;
 }
 
 /********Boton hamburgesa********/
-.left-nav{
-    background-color: rgba(26, 24, 24, 0.808);
-    padding: 0%;
-    position: fixed;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 998;
-    transform:  translate(-100%);
-    transition: all 0.5s;
+.botonAm {
+  position: fixed;
+  top: 88%;
+  right: calc(1rem + 1vw);
+  z-index: 999;
+  background-color: yellow;
+  border-radius: 50%;
 }
 
-.left-nav.activo{
-    transform:  translate(0%);
+.botonAm:hover {
+  background-color: black;
+  color: white;
 }
 
-.botonAm{
-    position: fixed;
-    top: 88%;
-    left: 95%;
-    z-index: 999;
-    background-color: yellow;
+.seccion-pantalla li {
+  list-style: none;
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 40%;
+  padding-top: 5%;
 }
-
-.botonAm:hover{
-    background-color: black;
-    color: white;
-}
-
-.seccion a{
-   text-decoration: none;
-   color: yellow;
-}
-
-.seccion li{
-    list-style: none;
-    text-align: center;  
-    padding: 2.8%;
-    font-size: xx-large;
-}
-
-.seccion a :hover{
-    background-color: yellow;
-    color: black;
-    transition: 0.5s;
-}
-
-.seccion-pantalla li{
-    list-style: none;
-    font-size: x-large;
-    text-align: center;
-    margin-bottom: 40%;
-    padding-top: 5%;
-}
-.seccion-pantalla{
-    padding-left: 0px;
+.seccion-pantalla {
+  padding-left: 0px;
 }
 
 /********Boton subir a index********/
-.btn-scroll{
-    visibility: hidden;
-    transition: all 0.5s;
-    background-color: yellow;
+.btn-scroll {
+  visibility: hidden;
+  transition: all 0.5s;
+  background-color: yellow;
 }
 
-.btn-scroll:hover{
-    background-color: black;
-    color: white;
+.btn-scroll:hover {
+  background-color: black;
+  color: white;
 }
 
 /****** panel y punto que se mueve con teclado ********/
-.panel{
-    background-color: rgba(26, 24, 24, 0.884);
-    display: flex;
-    min-height: 50vh;
+.panel {
+  background-color: rgba(26, 24, 24, 0.884);
+  display: flex;
+  min-height: 50vh;
 }
 
-.punto{
-    height: 50px;
-    width: 50px;
-    margin: auto;
+.punto {
+  height: 50px;
+  width: 50px;
+  margin: auto;
 }
 
 /********clase modo oscuro********/
-.btn-oscuro{
-    left: 3%;
+.btn-oscuro {
+  left: 3%;
 }
 
-.modoOscuro{
-    background-color: rgba(27, 25, 25, 0.904);
+.modoOscuro {
+  background-color: rgba(27, 25, 25, 0.904);
 }
 
-.titulo{
-    color: white;
+.titulo {
+  color: white;
 }
 
-.seccionLi{
-    color: white;
+.seccionLi {
+  color: white;
 }
 
-.btnLeft{
-    background-color: white;
+.btnLeft {
+  background-color: white;
+}
+.raya-videoMapa {
+  margin-left: 25%;
+}
+/********Deteccion de concexoin********/
+.conexOf {
+  position: fixed;
+  z-index: 800;
+  background-color: red;
+  text-align: center;
+  padding: 1.2%;
+  color: white;
+  transition: all 3s;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+}
+
+.conexIn {
+  position: fixed;
+  z-index: 800;
+  background-color: green;
+  text-align: center;
+  padding: 1.2%;
+  color: white;
+  transition: all 3s;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+}
+
+/********filtro de busqueda********/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  margin: 5%;
+  background-color: yellow;
+  color: black;
+  border-radius: 2%;
+  border: none;
+  transition: all 0.5s ease-out;
+}
+
+.filtro {
+  opacity: 0;
+}
+
+/********responsive Slider********/
+.slider {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border: yellow thick;
+}
+
+.slider-slides {
+  position: relative;
+  height: 400px;
+}
+
+.slider-slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+
+.slider-slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.slider-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.slide-btn a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: yellow;
+  border-radius: 50%;
+  text-decoration: none;
+  color: black;
+  transition: all 2s;
+}
+
+.slider-btn a:hover {
+  color: white;
+}
+
+/********* scrolll spy ******/
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+      "titulo titulo"
+      "main  left-nav";
+  }
+
+  .titulo {
+    grid-area: titulo;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .left-nav {
+    grid-area: left-nav;
+    /*indica donde comienza el contenido stiky*/
+    align-self: start;
+    /*hace que el contenido qeude estatico en pantalla*/
+    justify-content: flex-start;
+    position: sticky;
+    transform: translate(0%);
+    visibility: visible;
+  }
+
+  .left-nav a li {
+    font-size: 19px;
+    text-align: right;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .btn-scroll {
+    display: initial;
+    left: calc(9.2rem + 1vw);
+  }
+
+  .seccion a.active {
+    background-color: yellow;
+    color: black;
+    transition: 0.2s;
+  }
 }
